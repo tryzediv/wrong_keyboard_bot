@@ -7,8 +7,8 @@ bot = telebot.TeleBot('TOKEN')
 # Функция по первому символу определяет на какой язык нужно перевести сообщение
 # и переводит согласно раскладке клавиатуры
 def wrong_key(text):
-    en_keys = "`qwertyuiop[]asdfghjkl;'zxcvbnm,."
-    ru_keys = "ёйцукенгшщзхъфывапролджэячсмитьбю"
+    en_keys = "`qwertyuiop[]asdfghjkl;'zxcvbnm,./?"
+    ru_keys = "ёйцукенгшщзхъфывапролджэячсмитьбю.,"
     result = ''
 
     if text[0].lower() in en_keys:
