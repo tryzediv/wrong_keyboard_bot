@@ -1,11 +1,4 @@
-FROM node:latest
-
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
-
-COPY package.json ./
-RUN yarn install
-
-COPY . /usr/src/app
-
-CMD ["yarn", "start"]
+FROM python:3.9.0-slim-buster
+COPY . .
+RUN pip3 install -r requirements.txt
+CMD python wrong_keyboard_bot.py
