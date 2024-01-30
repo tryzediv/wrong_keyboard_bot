@@ -1,4 +1,5 @@
 version: '3'
 services:
   wrong-keyboard-bot:
+    build: .
     image: tryzediv/wrong-keyboard-bot:latest
