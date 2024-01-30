@@ -1,7 +1,8 @@
 import telebot
 from telebot import types
+from env import bot_token
 
-bot = telebot.TeleBot('TOKEN')
+bot = telebot.TeleBot(bot_token)
 
 
 # Функция по первому символу определяет на какой язык нужно перевести сообщение

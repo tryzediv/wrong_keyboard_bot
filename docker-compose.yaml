@@ -2,3 +2,4 @@ version: '2'
 services:
   bot:
     build: .
+    image: tryzediv/wrong-keyboard-bot:latest
