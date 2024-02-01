@@ -2,10 +2,10 @@ import telebot
 from telebot import types
 import random
 from time import sleep
-from env import dice_token
+from env import bot_token
 
 
-bot = telebot.TeleBot(dice_token)
+bot = telebot.TeleBot(bot_token)
 
 # Уровни сложности броска
 diff_lvl = ['легкая', 'средняя', 'тяжелая']
