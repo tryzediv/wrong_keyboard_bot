@@ -1,2 +1,4 @@
 dice_bot/env.py
 wrong_keyboard/env.py
+.idea
+__pycache__
