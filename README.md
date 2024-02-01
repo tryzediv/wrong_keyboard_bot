@@ -5,7 +5,7 @@
 
 Локальное разворачивание:
 1. Склонировать репозиторий
-2. Создать файл env.py
-3. В файле env.py прописать переменную bot_token = "ВАШ_ТОКЕН"
-4. docker pull tryzediv/wrong_keyboard_bot:latest
+2. Сгенерировать токены можно в [боте]([url](https://t.me/BotFather))
+3. В папках dice_bot и wrong_keyboard создать файлы env.py
+4. В файлах env.py прописать переменную bot_token = "ВАШ_ТОКЕН"
 5. docker-compose up -d
