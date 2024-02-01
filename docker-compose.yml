@@ -1,6 +1,10 @@
 version: '3'
 services:
-  wrong-keyboard-bot:
+  bots:
     build: .
     image: tryzediv/wrong-keyboard-bot:latest
+    restart: always
+  dnd-dice-bot:
+    build: .
+    image: tryzediv/dice_bot:latest
     restart: always
