@@ -3,12 +3,15 @@ services:
   wrong-keyboard-bot:
     build: .
     image: tryzediv/wrong-keyboard-bot:latest
+    container_name: wrong-keyboard-bot
     restart: always
   dnd-dice-bot:
     build: .
     image: tryzediv/dice_bot:latest
+    container_name: dice_bot
     restart: always
   8-ball-bot:
     build: .
     image: tryzediv/8_ball_bot:latest
+    container_name: 8_ball_bot
     restart: always
