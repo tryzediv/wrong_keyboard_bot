@@ -1,5 +1,9 @@
-FROM python:3.9.0-slim-buster
-LABEL maintainer="tmn.harin.d@gmail.com"
-COPY . .
+FROM python:3.9.0-slim-buster as builder
+WORKDIR /app
+COPY requirements.txt .
 RUN pip3 install --no-cache-dir -r requirements.txt
+
+FROM python:3.9.0-slim-buster
+WORKDIR /app
+COPY --from=builder /app /app
 CMD python wrong_keyboard_bot.py
