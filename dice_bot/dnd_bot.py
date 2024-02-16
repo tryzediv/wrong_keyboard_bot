@@ -4,7 +4,6 @@ import random
 from time import sleep
 from env import bot_token
 
-
 bot = telebot.TeleBot(bot_token)
 
 # Уровни сложности броска
@@ -50,10 +49,10 @@ def dice_throw(edge):
     if result == 1:
         mess_1 = 'Вам выпало {}'.format(result)
         mess_2 = random.choice(crit_fail)
-    if result >= edge and result != 20:
+    if result > edge and result != 20:
         mess_1 = 'Вам выпало {}'.format(result)
         mess_2 = random.choice(success)
-    if result < edge and result != 1:
+    if result <= edge and result != 1:
         mess_1 = 'Вам выпало {}'.format(result)
         mess_2 = random.choice(fail)
     return mess_1, mess_2
@@ -137,4 +136,5 @@ def query_text(query):
     bot.answer_inline_query(query.id, [r])
 
 
-bot.polling(none_stop=True)
+if __name__ == '__main__':
+    bot.polling(none_stop=True)
